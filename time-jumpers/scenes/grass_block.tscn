@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci6cyip527doy"]
+
+[ext_resource type="Texture2D" uid="uid://dc845ejxaho3w" path="res://time-jumpers/sprites/grass_floor.png" id="1_iykqj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sjuhx"]
+resource_local_to_scene = true
+diffuse_mode = 3
+albedo_texture = ExtResource("1_iykqj")
+uv1_scale = Vector3(2, 2, 1)
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_tinvk"]
+material = SubResource("StandardMaterial3D_sjuhx")
+size = Vector3(2, 2, 2)
+
+[node name="GrassBlock" type="MeshInstance3D"]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, -1.09305, 0)
+mesh = SubResource("BoxMesh_tinvk")

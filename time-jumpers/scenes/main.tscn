@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://cidudq0p7jpov"]
+
+[ext_resource type="PackedScene" uid="uid://b4rslrvx6og5k" path="res://time-jumpers/scenes/terrain.tscn" id="2_goni7"]
+[ext_resource type="PackedScene" uid="uid://bfpxebyr0glsi" path="res://time-jumpers/scenes/unit.tscn" id="2_o2lcb"]
+[ext_resource type="PackedScene" uid="uid://ci6cyip527doy" path="res://time-jumpers/scenes/grass_block.tscn" id="2_o3xhn"]
+[ext_resource type="PackedScene" uid="uid://nj0ev4yjgql1" path="res://time-jumpers/scenes/trees.tscn" id="3_bjl33"]
+[ext_resource type="PackedScene" uid="uid://dpvu0la5cjnxc" path="res://time-jumpers/scenes/house.tscn" id="4_3wax8"]
+[ext_resource type="PackedScene" uid="uid://d4kk7gaoq3u11" path="res://time-jumpers/scenes/mountain.tscn" id="5_d3l6n"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Units" type="Node3D" parent="."]
+
+[node name="unit" parent="Units" instance=ExtResource("2_o2lcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.658824, 0)
+
+[node name="unit2" parent="Units" instance=ExtResource("2_o2lcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0.659, 0)
+
+[node name="unit3" parent="Units" instance=ExtResource("2_o2lcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4, 0.659, 0)
+
+[node name="unit4" parent="Units" instance=ExtResource("2_o2lcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6, 0.659, 0)
+
+[node name="unit5" parent="Units" instance=ExtResource("2_o2lcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.8, 0.659, 0)
+
+[node name="unit6" parent="Units" instance=ExtResource("2_o2lcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0.659, 0)
+
+[node name="unit7" parent="Units" instance=ExtResource("2_o2lcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2, 0.659, 0)
+
+[node name="unit8" parent="Units" instance=ExtResource("2_o2lcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4, 0.659, 0)
+
+[node name="Units2" type="Node3D" parent="."]
+
+[node name="unit" parent="Units2" instance=ExtResource("2_o2lcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.659, -24.2)
+
+[node name="unit2" parent="Units2" instance=ExtResource("2_o2lcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0.659, -24.2)
+
+[node name="unit3" parent="Units2" instance=ExtResource("2_o2lcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4, 0.659, -24.2)
+
+[node name="unit4" parent="Units2" instance=ExtResource("2_o2lcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6, 0.659, -24.2)
+
+[node name="unit5" parent="Units2" instance=ExtResource("2_o2lcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.8, 0.659, -24.2)
+
+[node name="unit6" parent="Units2" instance=ExtResource("2_o2lcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0.659, -24.2)
+
+[node name="unit7" parent="Units2" instance=ExtResource("2_o2lcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2, 0.659, -24.2)
+
+[node name="unit8" parent="Units2" instance=ExtResource("2_o2lcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4, 0.659, -24.2)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.852923, 0.522037, 0, -0.522037, 0.852923, -7.86982, 9.46387, 9.62679)
+keep_aspect = 0
+fov = 78.0
+size = 30.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 4, 7)
+
+[node name="Terrain" parent="." instance=ExtResource("2_goni7")]
+trees = ExtResource("3_bjl33")
+house = ExtResource("4_3wax8")
+mountain = ExtResource("5_d3l6n")
+grass_floor = ExtResource("2_o3xhn")

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpvu0la5cjnxc"]
+
+[ext_resource type="Script" path="res://time-jumpers/scripts/house.gd" id="1_klfk6"]
+[ext_resource type="Texture2D" uid="uid://bfeswq1qo0vqo" path="res://time-jumpers/sprites/house.png" id="2_r0hfl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4f7rk"]
+size = Vector3(1, 1, 4.46869)
+
+[node name="House" type="Node3D"]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0, 0)
+script = ExtResource("1_klfk6")
+
+[node name="House" type="Sprite3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+texture = ExtResource("2_r0hfl")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+gravity_scale = 0.0
+max_contacts_reported = 10
+contact_monitor = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.77636e-15, 0, 1.73215)
+shape = SubResource("BoxShape3D_4f7rk")
+
+[connection signal="body_entered" from="RigidBody3D" to="." method="_on_rigid_body_3d_body_entered"]

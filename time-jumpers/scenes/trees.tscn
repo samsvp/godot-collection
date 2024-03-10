@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://nj0ev4yjgql1"]
+
+[ext_resource type="Texture2D" uid="uid://ba2cd8rm7frkt" path="res://time-jumpers/sprites/tree.png" id="1_67fqk"]
+[ext_resource type="Script" path="res://time-jumpers/scripts/trees.gd" id="1_sf5r3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4f7rk"]
+size = Vector3(1, 1, 4.46869)
+
+[node name="Trees" type="Node3D"]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0, 0)
+script = ExtResource("1_sf5r3")
+
+[node name="Tree" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.74437e-08, 0, 1.34811)
+texture = ExtResource("1_67fqk")
+
+[node name="Tree2" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.796733, 0, -0.707216)
+texture = ExtResource("1_67fqk")
+
+[node name="Tree3" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.676316, 0, 0.408853)
+texture = ExtResource("1_67fqk")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+gravity_scale = 0.0
+max_contacts_reported = 10
+contact_monitor = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.77636e-15, 0, 1.73215)
+shape = SubResource("BoxShape3D_4f7rk")
+
+[connection signal="body_entered" from="RigidBody3D" to="." method="_on_rigid_body_3d_body_entered"]
