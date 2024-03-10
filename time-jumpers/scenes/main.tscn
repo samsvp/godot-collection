@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cidudq0p7jpov"]
+[gd_scene load_steps=8 format=3 uid="uid://cidudq0p7jpov"]
 
 [ext_resource type="PackedScene" uid="uid://b4rslrvx6og5k" path="res://time-jumpers/scenes/terrain.tscn" id="2_goni7"]
 [ext_resource type="PackedScene" uid="uid://bfpxebyr0glsi" path="res://time-jumpers/scenes/unit.tscn" id="2_o2lcb"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://nj0ev4yjgql1" path="res://time-jumpers/scenes/trees.tscn" id="3_bjl33"]
 [ext_resource type="PackedScene" uid="uid://dpvu0la5cjnxc" path="res://time-jumpers/scenes/house.tscn" id="4_3wax8"]
 [ext_resource type="PackedScene" uid="uid://d4kk7gaoq3u11" path="res://time-jumpers/scenes/mountain.tscn" id="5_d3l6n"]
+[ext_resource type="PackedScene" uid="uid://ckh2ewucnheua" path="res://time-jumpers/scenes/water_block.tscn" id="6_6xhxj"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -74,4 +75,5 @@ transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 4, 7)
 trees = ExtResource("3_bjl33")
 house = ExtResource("4_3wax8")
 mountain = ExtResource("5_d3l6n")
+water = ExtResource("6_6xhxj")
 grass_floor = ExtResource("2_o3xhn")

@@ -5,14 +5,18 @@ const OFFSET_Z := 2.2
 
 @export var rows := 8
 @export var columns := 12
+
+# sprites
 @export var trees: PackedScene
 @export var house: PackedScene
 @export var mountain: PackedScene
+
+# cubes 
+@export var water: PackedScene 
 @export var grass_floor: PackedScene
 
 var floor_1 := load("res://time-jumpers/sprites/grass_floor_1.png")
 var floor_2 := load("res://time-jumpers/sprites/grass_floor_2.png")
-var water := load("res://time-jumpers/sprites/water.png")
 
 var terrain: Array
 
@@ -35,7 +39,11 @@ func _ready():
 
 ## creates a tile at the given (x, z) position
 func create_tile(x: int, z: int) -> void:
-	var gf_instance := grass_floor.instantiate()
+	var gf_instance 
+	if z == 0 or z == columns - 1 or terrain[z - 1][x] != TileTypes.Water:
+		gf_instance = grass_floor.instantiate()
+	else:
+		gf_instance = water.instantiate()
 	gf_instance.mesh.resource_local_to_scene = true
 	var position := -Vector3(OFFSET_X * x, 1.0, OFFSET_Z * z)
 	gf_instance.position = position
@@ -45,7 +53,7 @@ func create_tile(x: int, z: int) -> void:
 	]
 	
 	if z != 0 and z != columns - 1 and terrain[z - 1][x] == TileTypes.Water:
-		gf_instance.get_active_material(0).albedo_texture = water
+		pass
 	elif (x + z % 2) % 2 == 0:
 		gf_instance.get_active_material(0).albedo_texture = floor_1
 	else:

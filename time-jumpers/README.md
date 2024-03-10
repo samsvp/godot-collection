@@ -91,3 +91,16 @@ The game uses the mouse to select the units and draw its movement path. To selec
 
 ## Development Timeline
 
+| Assignment | Status |
+|------------|--------|
+| Create first world random level generator | Done |
+| Create fire shader | Done |
+| Create water shader | Done |
+| Create ice block/shader | - |
+| Make player movement | - |
+| Make attack animations (fire, ice, water, electric, wind and grass) | - |
+| Make enemy movement | - |
+| Make enemy AI | - |
+| Make run away NPCs AI | - |
+| Create second world random level generator | Done |
+| Create third world random level generator | Done |

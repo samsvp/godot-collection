@@ -11,15 +11,15 @@ transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0, 0)
 script = ExtResource("1_sf5r3")
 
 [node name="Tree" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.74437e-08, 0, 1.34811)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.67614e-09, 0, 0.612879)
 texture = ExtResource("1_67fqk")
 
 [node name="Tree2" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.796733, 0, -0.707216)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.796733, 0, -0.883894)
 texture = ExtResource("1_67fqk")
 
 [node name="Tree3" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.676316, 0, 0.408853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.676316, 0, -0.326378)
 texture = ExtResource("1_67fqk")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
